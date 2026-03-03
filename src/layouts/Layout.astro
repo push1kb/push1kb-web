@@ -1,0 +1,72 @@
+---
+import '@fontsource/monaspace-neon/400.css';
+import '@fontsource/monaspace-neon/700.css';
+import '@fontsource/monaspace-krypton/400.css';
+import '@fontsource/monaspace-krypton/700.css';
+import '@fontsource/monaspace-radon/400.css';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Vijay Pushkin — Lead Experience Engineer. Full-stack developer building scalable web and decentralized applications across multi-chain ecosystems." />
+    <meta name="author" content="Vijay Pushkin" />
+    <link rel="canonical" href="https://push1kb.com" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Vijay Pushkin — Lead Experience Engineer" />
+    <meta property="og:description" content="Full-stack developer building scalable web and decentralized applications across multi-chain ecosystems." />
+    <meta property="og:url" content="https://push1kb.com" />
+    <meta property="og:site_name" content="Vijay Pushkin" />
+    <meta property="og:image" content="https://push1kb.com/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vijay Pushkin — Lead Experience Engineer" />
+    <meta name="twitter:description" content="Full-stack developer building scalable web and decentralized applications across multi-chain ecosystems." />
+    <meta name="twitter:image" content="https://push1kb.com/og.png" />
+    <script is:inline>
+      (function() {
+        var t = localStorage.getItem('theme');
+        if (t) document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+  </head>
+  <body class="bg-terminal-bg text-terminal-green font-mono leading-relaxed overflow-x-hidden selection:bg-terminal-green selection:text-terminal-bg">
+    <!-- CRT scanlines -->
+    <div class="fixed inset-0 pointer-events-none z-50 scanlines" aria-hidden="true"></div>
+
+    <div class="max-w-3xl mx-auto px-6 pt-8 pb-16 sm:px-4">
+      <slot />
+    </div>
+
+    <style>
+      .scanlines {
+        background: repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 2px,
+          rgba(0, 0, 0, 0.03) 2px,
+          rgba(0, 0, 0, 0.03) 4px
+        );
+      }
+    </style>
+  </body>
+</html>

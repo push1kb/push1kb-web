@@ -1,0 +1,61 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#1e1e2e"/>
+
+  <!-- Subtle grid lines -->
+  <g opacity="0.04" stroke="#cdd6f4">
+    <line x1="0" y1="0" x2="0" y2="630" stroke-width="1"/>
+    <line x1="60" y1="0" x2="60" y2="630" stroke-width="1"/>
+    <line x1="120" y1="0" x2="120" y2="630" stroke-width="1"/>
+    <line x1="180" y1="0" x2="180" y2="630" stroke-width="1"/>
+    <line x1="240" y1="0" x2="240" y2="630" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="630" stroke-width="1"/>
+    <line x1="360" y1="0" x2="360" y2="630" stroke-width="1"/>
+    <line x1="420" y1="0" x2="420" y2="630" stroke-width="1"/>
+    <line x1="480" y1="0" x2="480" y2="630" stroke-width="1"/>
+    <line x1="540" y1="0" x2="540" y2="630" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="630" stroke-width="1"/>
+    <line x1="660" y1="0" x2="660" y2="630" stroke-width="1"/>
+    <line x1="720" y1="0" x2="720" y2="630" stroke-width="1"/>
+    <line x1="780" y1="0" x2="780" y2="630" stroke-width="1"/>
+    <line x1="840" y1="0" x2="840" y2="630" stroke-width="1"/>
+    <line x1="900" y1="0" x2="900" y2="630" stroke-width="1"/>
+    <line x1="960" y1="0" x2="960" y2="630" stroke-width="1"/>
+    <line x1="1020" y1="0" x2="1020" y2="630" stroke-width="1"/>
+    <line x1="1080" y1="0" x2="1080" y2="630" stroke-width="1"/>
+    <line x1="1140" y1="0" x2="1140" y2="630" stroke-width="1"/>
+    <line x1="1200" y1="0" x2="1200" y2="630" stroke-width="1"/>
+  </g>
+
+  <!-- Border -->
+  <rect x="4" y="4" width="1192" height="622" rx="0" fill="none" stroke="#45475a" stroke-width="2"/>
+
+  <!-- Terminal prompt -->
+  <text x="80" y="200" font-family="'JetBrains Mono', monospace" font-size="22" fill="#6c7086">
+    <tspan fill="#94e2d5">visitor@portfolio</tspan><tspan fill="#6c7086">:</tspan><tspan fill="#f9e2af">~</tspan><tspan fill="#6c7086"> $ </tspan><tspan fill="#a6e3a1">cat about.txt</tspan>
+  </text>
+
+  <!-- Name -->
+  <text x="80" y="310" font-family="'JetBrains Mono', monospace" font-size="72" font-weight="700" fill="#a6e3a1">
+    Vijay Pushkin
+  </text>
+
+  <!-- Title -->
+  <text x="80" y="370" font-family="'JetBrains Mono', monospace" font-size="24" fill="#6c7086" font-style="italic">
+    Lead Experience Engineer
+  </text>
+
+  <!-- URL -->
+  <text x="80" y="540" font-family="'JetBrains Mono', monospace" font-size="20" fill="#45475a">
+    push1kb.com
+  </text>
+
+  <!-- Blinking cursor -->
+  <rect x="312" y="520" width="14" height="24" fill="#a6e3a1" opacity="0.8"/>
+</svg>

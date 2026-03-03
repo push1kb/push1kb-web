@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: 'Monaspace Neon', monospace;
+  --font-terminal: 'Monaspace Krypton', monospace;
+  --font-comment: 'Monaspace Radon', monospace;
+
+  --color-terminal-green: #7aa2f7;
+  --color-terminal-green-dim: #bb9af7;
+  --color-terminal-green-glow: rgba(122, 162, 247, 0.12);
+  --color-terminal-bg: #1a1b26;
+  --color-terminal-bg-light: #24283b;
+  --color-terminal-border: #414868;
+  --color-terminal-dim: #565f89;
+  --color-terminal-amber: #ff9e64;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* View Transition: circle reveal from button */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 9999;
+  animation: circle-reveal 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes circle-reveal {
+  from {
+    clip-path: circle(0% at var(--reveal-x, 50%) var(--reveal-y, 50%));
+  }
+  to {
+    clip-path: circle(150% at var(--reveal-x, 50%) var(--reveal-y, 50%));
+  }
+}
+
+/* ── Tokyo Night Light ── */
+[data-theme="tokyo-day"] {
+  --color-terminal-green: #2959aa;
+  --color-terminal-green-dim: #5a3e8e;
+  --color-terminal-green-glow: rgba(41, 89, 170, 0.1);
+  --color-terminal-bg: #e6e7ed;
+  --color-terminal-bg-light: #d5d6db;
+  --color-terminal-border: #c4c8da;
+  --color-terminal-dim: #6c6e75;
+  --color-terminal-amber: #965027;
+}
+
+/* ── Catppuccin Mocha ── */
+[data-theme="mocha"] {
+  --color-terminal-green: #a6e3a1;
+  --color-terminal-green-dim: #94e2d5;
+  --color-terminal-green-glow: rgba(166, 227, 161, 0.12);
+  --color-terminal-bg: #1e1e2e;
+  --color-terminal-bg-light: #313244;
+  --color-terminal-border: #45475a;
+  --color-terminal-dim: #6c7086;
+  --color-terminal-amber: #f9e2af;
+}
+
+/* ── Catppuccin Latte ── */
+[data-theme="latte"] {
+  --color-terminal-green: #40a02b;
+  --color-terminal-green-dim: #179299;
+  --color-terminal-green-glow: rgba(64, 160, 43, 0.1);
+  --color-terminal-bg: #eff1f5;
+  --color-terminal-bg-light: #e6e9ef;
+  --color-terminal-border: #ccd0da;
+  --color-terminal-dim: #6c6f85;
+  --color-terminal-amber: #df8e1d;
+}
