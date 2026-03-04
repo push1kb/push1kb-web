@@ -2,47 +2,47 @@
 import Layout from "../layouts/Layout.astro";
 
 const projects = [
-  {
-    name: "gunsole",
-    desc: "Comprehensive logging & analytics platform with Desktop app (Tauri/Rust), browser testing environment, and Cloud SaaS. Dual-interface: Dev Mode for debugging, Product Mode for analytics.",
-    tech: ["Tauri", "Rust", "TypeScript", "React"],
-    url: "https://gunsole.com",
-  },
-  {
-    name: "superlend",
-    desc: "Cross-chain lending protocol frontend. Reduced network overhead by 93% (80+ RPC calls to 4-6) via custom multicall batching. Architected across 6 blockchain networks.",
-    tech: ["Next.js", "React 19", "TypeScript", "viem", "wagmi"],
-    url: "https://app.superlend.xyz",
-  },
+    {
+        name: "gunsole",
+        desc: "Comprehensive logging & analytics platform with Desktop app (Tauri/Rust), browser testing environment, and Cloud SaaS. Dual-interface: Dev Mode for debugging, Product Mode for analytics.",
+        tech: ["Tauri", "Rust", "TypeScript", "React"],
+        url: "https://gunsole.com",
+    },
+    {
+        name: "superlend",
+        desc: "Cross-chain lending protocol frontend. Reduced network overhead by 93% (80+ RPC calls to 4-6) via custom multicall batching. Architected across 6 blockchain networks.",
+        tech: ["Next.js", "React 19", "TypeScript", "viem", "wagmi"],
+        url: "https://app.superlend.xyz",
+    },
 ];
 
 const skills = [
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Angular",
-  "Node.js",
-  "Python",
-  "Rust",
-  "Java",
-  "PostgreSQL",
-  "Firebase",
-  "Supabase",
-  "AWS",
-  "Docker",
-  "Git",
-  "Spring Boot",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Angular",
+    "Node.js",
+    "Python",
+    "Rust",
+    "Java",
+    "PostgreSQL",
+    "Firebase",
+    "Supabase",
+    "AWS",
+    "Docker",
+    "Git",
+    "Spring Boot",
 ];
 
 const links = [
-  { label: "github", url: "https://github.com/push1kb" },
-  { label: "x/twitter", url: "https://x.com/push1kb" },
-  { label: "linkedin", url: "https://linkedin.com/in/vijaypushkin" },
-  {
-    label: "stackoverflow",
-    url: "https://stackoverflow.com/users/9399978/pushkin",
-  },
+    { label: "github", url: "https://github.com/push1kb" },
+    { label: "x/twitter", url: "https://x.com/push1kb" },
+    { label: "linkedin", url: "https://linkedin.com/in/vijaypushkin" },
+    {
+        label: "stackoverflow",
+        url: "https://stackoverflow.com/users/9399978/pushkin",
+    },
 ];
 ---
 
@@ -55,7 +55,7 @@ const links = [
             ><span class="text-terminal-dim ml-1 mr-1">$</span>
             <span class="text-terminal-green">ls</span>
         </p>
-        <p class="text-sm mt-2 tracking-wider flex gap-6">
+        <p class="text-sm mt-2 tracking-wider flex flex-wrap gap-6">
             <a
                 href="#about"
                 class="text-terminal-amber no-underline border-none hover:text-terminal-green transition-colors duration-200"
@@ -84,8 +84,10 @@ const links = [
         </p>
     </header>
 
+    <hr class="mt-2 mb-10 opacity-10" />
+
     <!-- $ cat about.txt -->
-    <section id="about" class="pt-10">
+    <section id="about">
         <p class="text-sm font-terminal">
             <span class="text-terminal-green-dim">visitor@portfolio</span>:<span
                 class="text-terminal-amber">~</span
@@ -95,7 +97,6 @@ const links = [
         <div class="pt-6 pb-12">
             <h1
                 class="text-4xl sm:text-5xl md:text-6xl font-bold glitch"
-                style="text-shadow: 0 0 10px var(--color-terminal-green-glow), 0 0 40px var(--color-terminal-green-glow);"
                 data-text="Vijay Pushkin"
             >
                 Vijay Pushkin
@@ -113,6 +114,8 @@ const links = [
             </div>
         </div>
     </section>
+
+    <hr class="mt-2 mb-10 opacity-10" />
 
     <!-- $ cat projects.txt -->
     <section id="projects">
@@ -155,6 +158,8 @@ const links = [
         </div>
     </section>
 
+    <hr class="mt-2 mb-10 opacity-10" />
+
     <!-- $ ./skills.sh -->
     <section id="skills">
         <p class="text-sm font-terminal">
@@ -175,6 +180,8 @@ const links = [
             }
         </div>
     </section>
+
+    <hr class="mt-2 mb-10 opacity-10" />
 
     <!-- $ node contact.js -->
     <section id="contact">
@@ -199,6 +206,8 @@ const links = [
             }
         </div>
     </section>
+
+    <hr class="mt-2 mb-10 opacity-10" />
 
     <!-- $ ./theme.sh -->
     <section id="theme">
@@ -236,6 +245,8 @@ const links = [
         </div>
     </section>
 
+    <hr class="mt-2 mb-10 opacity-10" />
+
     <!-- Waiting prompt -->
     <footer>
         <p class="text-sm font-terminal">
@@ -265,14 +276,14 @@ const links = [
     }
 
     .glitch:hover::before {
-        animation: glitch-1 0.3s linear;
+        animation: glitch-1 1.5s infinite;
         opacity: 0.8;
         color: #ff0040;
         z-index: -1;
     }
 
     .glitch:hover::after {
-        animation: glitch-2 0.3s linear;
+        animation: glitch-2 1.5s infinite;
         opacity: 0.8;
         color: #0ff;
         z-index: -1;
@@ -283,25 +294,33 @@ const links = [
             clip-path: inset(40% 0 61% 0);
             transform: translate(-2px, -1px);
         }
-        20% {
+        5% {
             clip-path: inset(92% 0 1% 0);
             transform: translate(1px, 2px);
         }
-        40% {
+        10% {
             clip-path: inset(43% 0 1% 0);
             transform: translate(-1px, 3px);
         }
-        60% {
+        15% {
             clip-path: inset(25% 0 58% 0);
             transform: translate(3px, 1px);
         }
-        80% {
+        20% {
             clip-path: inset(54% 0 7% 0);
             transform: translate(-3px, -2px);
         }
-        100% {
+        25% {
             clip-path: inset(58% 0 43% 0);
             transform: translate(2px, 1px);
+        }
+        26% {
+            clip-path: inset();
+            transform: translate(0px, 0px);
+        }
+        100% {
+            clip-path: inset();
+            transform: translate(0px, 0px);
         }
     }
 
@@ -310,25 +329,34 @@ const links = [
             clip-path: inset(65% 0 13% 0);
             transform: translate(2px, 1px);
         }
-        20% {
+        5% {
             clip-path: inset(15% 0 62% 0);
             transform: translate(-1px, -2px);
         }
-        40% {
+        10% {
             clip-path: inset(78% 0 2% 0);
             transform: translate(1px, -1px);
         }
-        60% {
+        15% {
             clip-path: inset(5% 0 73% 0);
             transform: translate(-2px, 3px);
         }
-        80% {
+        20% {
             clip-path: inset(42% 0 25% 0);
             transform: translate(3px, -1px);
         }
-        100% {
+        25% {
             clip-path: inset(18% 0 60% 0);
             transform: translate(-1px, 2px);
+        }
+        26% {
+            clip-path: inset();
+            transform: translate(0px, 0px);
+        }
+
+        100% {
+            clip-path: inset();
+            transform: translate(0px, 0px);
         }
     }
 
