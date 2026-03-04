@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
 const projects = [
   {
@@ -17,275 +17,394 @@ const projects = [
 ];
 
 const skills = [
-  "JavaScript", "TypeScript", "React", "Next.js", "Angular",
-  "Node.js", "Python", "Rust", "Java",
-  "PostgreSQL", "Firebase", "Supabase", "AWS",
-  "Docker", "Git", "Spring Boot",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Angular",
+  "Node.js",
+  "Python",
+  "Rust",
+  "Java",
+  "PostgreSQL",
+  "Firebase",
+  "Supabase",
+  "AWS",
+  "Docker",
+  "Git",
+  "Spring Boot",
 ];
 
 const links = [
   { label: "github", url: "https://github.com/push1kb" },
   { label: "x/twitter", url: "https://x.com/push1kb" },
   { label: "linkedin", url: "https://linkedin.com/in/vijaypushkin" },
-  { label: "stackoverflow", url: "https://stackoverflow.com/users/9399978/pushkin" },
+  {
+    label: "stackoverflow",
+    url: "https://stackoverflow.com/users/9399978/pushkin",
+  },
 ];
 ---
 
 <Layout title="Vijay Pushkin">
+    <!-- $ ls -->
+    <header class="pb-2">
+        <p class="text-sm font-terminal">
+            <span class="text-terminal-green-dim">visitor@portfolio</span>:<span
+                class="text-terminal-amber">~</span
+            ><span class="text-terminal-dim ml-1 mr-1">$</span>
+            <span class="text-terminal-green">ls</span>
+        </p>
+        <p class="text-sm mt-2 tracking-wider flex gap-6">
+            <a
+                href="#about"
+                class="text-terminal-amber no-underline border-none hover:text-terminal-green transition-colors duration-200"
+                >about.txt</a
+            >
+            <a
+                href="#projects"
+                class="text-terminal-amber no-underline border-none hover:text-terminal-green transition-colors duration-200"
+                >projects.txt</a
+            >
+            <a
+                href="#skills"
+                class="text-terminal-amber no-underline border-none hover:text-terminal-green transition-colors duration-200"
+                >skills.sh</a
+            >
+            <a
+                href="#contact"
+                class="text-terminal-amber no-underline border-none hover:text-terminal-green transition-colors duration-200"
+                >contact.js</a
+            >
+            <a
+                href="#theme"
+                class="text-terminal-amber no-underline border-none hover:text-terminal-green transition-colors duration-200"
+                >theme.sh</a
+            >
+        </p>
+    </header>
 
-  <!-- $ ls -->
-  <header class="pb-2">
-    <p class="text-sm font-terminal">
-      <span class="text-terminal-green-dim">visitor@portfolio</span>:<span class="text-terminal-amber">~</span><span class="text-terminal-dim ml-1 mr-1">$</span>
-      <span class="text-terminal-green">ls</span>
-    </p>
-    <p class="text-sm mt-2 tracking-wider flex gap-6">
-      <a href="#about" class="text-terminal-amber no-underline border-none hover:text-terminal-green transition-colors duration-200">about.txt</a>
-      <a href="#projects" class="text-terminal-amber no-underline border-none hover:text-terminal-green transition-colors duration-200">projects.txt</a>
-      <a href="#skills" class="text-terminal-amber no-underline border-none hover:text-terminal-green transition-colors duration-200">skills.sh</a>
-      <a href="#contact" class="text-terminal-amber no-underline border-none hover:text-terminal-green transition-colors duration-200">contact.js</a>
-      <a href="#theme" class="text-terminal-amber no-underline border-none hover:text-terminal-green transition-colors duration-200">theme.sh</a>
-    </p>
-  </header>
+    <!-- $ cat about.txt -->
+    <section id="about" class="pt-10">
+        <p class="text-sm font-terminal">
+            <span class="text-terminal-green-dim">visitor@portfolio</span>:<span
+                class="text-terminal-amber">~</span
+            ><span class="text-terminal-dim ml-1 mr-1">$</span>
+            <span class="text-terminal-green">cat about.txt</span>
+        </p>
+        <div class="pt-6 pb-12">
+            <h1
+                class="text-4xl sm:text-5xl md:text-6xl font-bold glitch"
+                style="text-shadow: 0 0 10px var(--color-terminal-green-glow), 0 0 40px var(--color-terminal-green-glow);"
+                data-text="Vijay Pushkin"
+            >
+                Vijay Pushkin
+            </h1>
+            <p class="text-terminal-dim mt-1 font-comment italic">
+                Lead Experience Engineer
+            </p>
+            <div class="mt-6 text-sm text-terminal-green-dim leading-loose">
+                <span
+                    >Full-stack engineer building scalable, high-performance web
+                    and decentralized applications. Experienced across
+                    multi-chain ecosystems, now exploring RAG and Agentic AI to
+                    build intelligent systems.</span
+                >
+            </div>
+        </div>
+    </section>
 
-  <!-- $ cat about.txt -->
-  <section id="about" class="pt-10">
-    <p class="text-sm font-terminal">
-      <span class="text-terminal-green-dim">visitor@portfolio</span>:<span class="text-terminal-amber">~</span><span class="text-terminal-dim ml-1 mr-1">$</span>
-      <span class="text-terminal-green">cat about.txt</span>
-    </p>
-    <div class="pt-6 pb-12">
-      <h1
-        class="text-4xl sm:text-5xl md:text-6xl font-bold glitch"
-        style="text-shadow: 0 0 10px var(--color-terminal-green-glow), 0 0 40px var(--color-terminal-green-glow);"
-        data-text="Vijay Pushkin"
-      >
-        Vijay Pushkin
-      </h1>
-      <p class="text-terminal-dim mt-1 font-comment italic">Lead Experience Engineer</p>
-      <div class="mt-6 text-sm text-terminal-green-dim leading-loose">
-        <span>Full-stack engineer building scalable, high-performance web and decentralized applications. Experienced across multi-chain ecosystems, now exploring RAG and Agentic AI to build intelligent systems.</span>
-      </div>
-    </div>
-  </section>
+    <!-- $ cat projects.txt -->
+    <section id="projects">
+        <p class="text-sm font-terminal">
+            <span class="text-terminal-green-dim">visitor@portfolio</span>:<span
+                class="text-terminal-amber">~</span
+            ><span class="text-terminal-dim ml-1 mr-1">$</span>
+            <span class="text-terminal-green">cat projects.txt</span>
+        </p>
+        <div class="flex flex-col gap-4 pt-6 pb-12">
+            {
+                projects.map((project, i) => (
+                    <a
+                        href={project.url}
+                        class="block border border-terminal-border p-5 no-underline transition-all duration-200 hover:border-terminal-green-dim hover:bg-terminal-bg-light group"
+                        style="box-shadow: none;"
+                        data-hover-glow
+                    >
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-terminal-dim text-xs">
+                                [{String(i).padStart(2, "0")}]
+                            </span>
+                            <span class="text-terminal-green font-bold">
+                                {project.name}
+                            </span>
+                        </div>
+                        <p class="text-terminal-green-dim text-sm mb-3">
+                            {project.desc}
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            {project.tech.map((t) => (
+                                <span class="text-xs text-terminal-amber border border-terminal-border px-2 py-0.5 tracking-wider">
+                                    {t}
+                                </span>
+                            ))}
+                        </div>
+                    </a>
+                ))
+            }
+        </div>
+    </section>
 
-  <!-- $ cat projects.txt -->
-  <section id="projects">
-    <p class="text-sm font-terminal">
-      <span class="text-terminal-green-dim">visitor@portfolio</span>:<span class="text-terminal-amber">~</span><span class="text-terminal-dim ml-1 mr-1">$</span>
-      <span class="text-terminal-green">cat projects.txt</span>
-    </p>
-    <div class="flex flex-col gap-4 pt-6 pb-12">
-      {projects.map((project, i) => (
-        <a
-          href={project.url}
-          class="block border border-terminal-border p-5 no-underline transition-all duration-200 hover:border-terminal-green-dim hover:bg-terminal-bg-light group"
-          style="box-shadow: none;"
-          data-hover-glow
+    <!-- $ ./skills.sh -->
+    <section id="skills">
+        <p class="text-sm font-terminal">
+            <span class="text-terminal-green-dim">visitor@portfolio</span>:<span
+                class="text-terminal-amber">~</span
+            ><span class="text-terminal-dim ml-1 mr-1">$</span>
+            <span class="text-terminal-green">./skills.sh</span>
+        </p>
+        <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 pt-6 pb-12"
         >
-          <div class="flex items-center gap-3 mb-2">
-            <span class="text-terminal-dim text-xs">[{String(i).padStart(2, '0')}]</span>
-            <span class="text-terminal-green font-bold">{project.name}</span>
-          </div>
-          <p class="text-terminal-green-dim text-sm mb-3">{project.desc}</p>
-          <div class="flex flex-wrap gap-2">
-            {project.tech.map((t) => (
-              <span class="text-xs text-terminal-amber border border-terminal-border px-2 py-0.5 tracking-wider">
-                {t}
-              </span>
-            ))}
-          </div>
-        </a>
-      ))}
-    </div>
-  </section>
+            {
+                skills.map((skill) => (
+                    <span class="text-sm text-terminal-green-dim py-1 transition-colors duration-150 hover:text-terminal-green">
+                        {`> ${skill}`}
+                    </span>
+                ))
+            }
+        </div>
+    </section>
 
-  <!-- $ ./skills.sh -->
-  <section id="skills">
-    <p class="text-sm font-terminal">
-      <span class="text-terminal-green-dim">visitor@portfolio</span>:<span class="text-terminal-amber">~</span><span class="text-terminal-dim ml-1 mr-1">$</span>
-      <span class="text-terminal-green">./skills.sh</span>
-    </p>
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 pt-6 pb-12">
-      {skills.map((skill) => (
-        <span class="text-sm text-terminal-green-dim py-1 transition-colors duration-150 hover:text-terminal-green">
-          {`> ${skill}`}
-        </span>
-      ))}
-    </div>
-  </section>
+    <!-- $ node contact.js -->
+    <section id="contact">
+        <p class="text-sm font-terminal">
+            <span class="text-terminal-green-dim">visitor@portfolio</span>:<span
+                class="text-terminal-amber">~</span
+            ><span class="text-terminal-dim ml-1 mr-1">$</span>
+            <span class="text-terminal-green">node contact.js</span>
+        </p>
+        <div class="flex flex-wrap gap-6 pt-6 pb-12">
+            {
+                links.map((link) => (
+                    <a
+                        href={link.url}
+                        class="text-terminal-amber no-underline transition-colors duration-200 hover:text-terminal-green"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        [{link.label}]
+                    </a>
+                ))
+            }
+        </div>
+    </section>
 
-  <!-- $ node contact.js -->
-  <section id="contact">
-    <p class="text-sm font-terminal">
-      <span class="text-terminal-green-dim">visitor@portfolio</span>:<span class="text-terminal-amber">~</span><span class="text-terminal-dim ml-1 mr-1">$</span>
-      <span class="text-terminal-green">node contact.js</span>
-    </p>
-    <div class="flex flex-wrap gap-6 pt-6 pb-12">
-      {links.map((link) => (
-        <a
-          href={link.url}
-          class="text-terminal-amber no-underline transition-colors duration-200 hover:text-terminal-green"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          [{link.label}]
-        </a>
-      ))}
-    </div>
-  </section>
+    <!-- $ ./theme.sh -->
+    <section id="theme">
+        <p class="text-sm font-terminal">
+            <span class="text-terminal-green-dim">visitor@portfolio</span>:<span
+                class="text-terminal-amber">~</span
+            ><span class="text-terminal-dim ml-1 mr-1">$</span>
+            <span class="text-terminal-green">./theme.sh</span>
+        </p>
+        <div class="flex flex-wrap gap-4 pt-6 pb-12">
+            <button data-set-theme="" class="theme-btn">
+                <span
+                    class="inline-block w-3 h-3 rounded-full border border-terminal-border mr-2"
+                    style="background: #7aa2f7;"></span>
+                tokyo night
+            </button>
+            <button data-set-theme="tokyo-day" class="theme-btn">
+                <span
+                    class="inline-block w-3 h-3 rounded-full border border-terminal-border mr-2"
+                    style="background: #2959aa;"></span>
+                tokyo night light
+            </button>
+            <button data-set-theme="mocha" class="theme-btn">
+                <span
+                    class="inline-block w-3 h-3 rounded-full border border-terminal-border mr-2"
+                    style="background: #a6e3a1;"></span>
+                catppuccin mocha
+            </button>
+            <button data-set-theme="latte" class="theme-btn">
+                <span
+                    class="inline-block w-3 h-3 rounded-full border border-terminal-border mr-2"
+                    style="background: #40a02b;"></span>
+                catppuccin latte
+            </button>
+        </div>
+    </section>
 
-  <!-- $ ./theme.sh -->
-  <section id="theme">
-    <p class="text-sm font-terminal">
-      <span class="text-terminal-green-dim">visitor@portfolio</span>:<span class="text-terminal-amber">~</span><span class="text-terminal-dim ml-1 mr-1">$</span>
-      <span class="text-terminal-green">./theme.sh</span>
-    </p>
-    <div class="flex flex-wrap gap-4 pt-6 pb-12">
-      <button data-set-theme="" class="theme-btn">
-        <span class="inline-block w-3 h-3 rounded-full border border-terminal-border mr-2" style="background: #7aa2f7;"></span>
-        tokyo night
-      </button>
-      <button data-set-theme="tokyo-day" class="theme-btn">
-        <span class="inline-block w-3 h-3 rounded-full border border-terminal-border mr-2" style="background: #2959aa;"></span>
-        tokyo night light
-      </button>
-      <button data-set-theme="mocha" class="theme-btn">
-        <span class="inline-block w-3 h-3 rounded-full border border-terminal-border mr-2" style="background: #a6e3a1;"></span>
-        catppuccin mocha
-      </button>
-      <button data-set-theme="latte" class="theme-btn">
-        <span class="inline-block w-3 h-3 rounded-full border border-terminal-border mr-2" style="background: #40a02b;"></span>
-        catppuccin latte
-      </button>
-    </div>
-  </section>
-
-  <!-- Waiting prompt -->
-  <footer>
-    <p class="text-sm font-terminal">
-      <span class="text-terminal-green-dim">visitor@portfolio</span>:<span class="text-terminal-amber">~</span><span class="text-terminal-dim ml-1 mr-1">$</span>
-      <span class="font-bold text-terminal-green animate-pulse">_</span>
-    </p>
-  </footer>
+    <!-- Waiting prompt -->
+    <footer>
+        <p class="text-sm font-terminal">
+            <span class="text-terminal-green-dim">visitor@portfolio</span>:<span
+                class="text-terminal-amber">~</span
+            ><span class="text-terminal-dim ml-1 mr-1">$</span>
+            <span class="font-bold text-terminal-green animate-pulse">_</span>
+        </p>
+    </footer>
 </Layout>
 
 <style>
-  /* Glitch effect on hover */
-  .glitch {
-    position: relative;
-  }
+    /* Glitch effect on hover */
+    .glitch {
+        position: relative;
+    }
 
-  .glitch::before,
-  .glitch::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-  }
+    .glitch::before,
+    .glitch::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
 
-  .glitch:hover::before {
-    animation: glitch-1 0.3s linear;
-    opacity: 0.8;
-    color: #ff0040;
-    z-index: -1;
-  }
+    .glitch:hover::before {
+        animation: glitch-1 0.3s linear;
+        opacity: 0.8;
+        color: #ff0040;
+        z-index: -1;
+    }
 
-  .glitch:hover::after {
-    animation: glitch-2 0.3s linear;
-    opacity: 0.8;
-    color: #0ff;
-    z-index: -1;
-  }
+    .glitch:hover::after {
+        animation: glitch-2 0.3s linear;
+        opacity: 0.8;
+        color: #0ff;
+        z-index: -1;
+    }
 
-  @keyframes glitch-1 {
-    0%   { clip-path: inset(40% 0 61% 0); transform: translate(-2px, -1px); }
-    20%  { clip-path: inset(92% 0 1% 0);  transform: translate(1px, 2px); }
-    40%  { clip-path: inset(43% 0 1% 0);  transform: translate(-1px, 3px); }
-    60%  { clip-path: inset(25% 0 58% 0); transform: translate(3px, 1px); }
-    80%  { clip-path: inset(54% 0 7% 0);  transform: translate(-3px, -2px); }
-    100% { clip-path: inset(58% 0 43% 0); transform: translate(2px, 1px); }
-  }
+    @keyframes glitch-1 {
+        0% {
+            clip-path: inset(40% 0 61% 0);
+            transform: translate(-2px, -1px);
+        }
+        20% {
+            clip-path: inset(92% 0 1% 0);
+            transform: translate(1px, 2px);
+        }
+        40% {
+            clip-path: inset(43% 0 1% 0);
+            transform: translate(-1px, 3px);
+        }
+        60% {
+            clip-path: inset(25% 0 58% 0);
+            transform: translate(3px, 1px);
+        }
+        80% {
+            clip-path: inset(54% 0 7% 0);
+            transform: translate(-3px, -2px);
+        }
+        100% {
+            clip-path: inset(58% 0 43% 0);
+            transform: translate(2px, 1px);
+        }
+    }
 
-  @keyframes glitch-2 {
-    0%   { clip-path: inset(65% 0 13% 0); transform: translate(2px, 1px); }
-    20%  { clip-path: inset(15% 0 62% 0); transform: translate(-1px, -2px); }
-    40%  { clip-path: inset(78% 0 2% 0);  transform: translate(1px, -1px); }
-    60%  { clip-path: inset(5% 0 73% 0);  transform: translate(-2px, 3px); }
-    80%  { clip-path: inset(42% 0 25% 0); transform: translate(3px, -1px); }
-    100% { clip-path: inset(18% 0 60% 0); transform: translate(-1px, 2px); }
-  }
+    @keyframes glitch-2 {
+        0% {
+            clip-path: inset(65% 0 13% 0);
+            transform: translate(2px, 1px);
+        }
+        20% {
+            clip-path: inset(15% 0 62% 0);
+            transform: translate(-1px, -2px);
+        }
+        40% {
+            clip-path: inset(78% 0 2% 0);
+            transform: translate(1px, -1px);
+        }
+        60% {
+            clip-path: inset(5% 0 73% 0);
+            transform: translate(-2px, 3px);
+        }
+        80% {
+            clip-path: inset(42% 0 25% 0);
+            transform: translate(3px, -1px);
+        }
+        100% {
+            clip-path: inset(18% 0 60% 0);
+            transform: translate(-1px, 2px);
+        }
+    }
 
-  /* Glow on project card hover */
-  [data-hover-glow]:hover {
-    box-shadow: 0 0 20px var(--color-terminal-green-glow) !important;
-  }
+    /* Glow on project card hover */
+    [data-hover-glow]:hover {
+        box-shadow: 0 0 20px var(--color-terminal-green-glow) !important;
+    }
 
-  /* Theme buttons */
-  .theme-btn {
-    display: flex;
-    align-items: center;
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--color-terminal-dim);
-    background: none;
-    border: 1px solid var(--color-terminal-border);
-    padding: 0.4rem 0.75rem;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
+    /* Theme buttons */
+    .theme-btn {
+        display: flex;
+        align-items: center;
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        color: var(--color-terminal-dim);
+        background: none;
+        border: 1px solid var(--color-terminal-border);
+        padding: 0.4rem 0.75rem;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
 
-  .theme-btn:hover,
-  .theme-btn.active {
-    color: var(--color-terminal-green);
-    border-color: var(--color-terminal-green-dim);
-    box-shadow: 0 0 12px var(--color-terminal-green-glow);
-  }
+    .theme-btn:hover,
+    .theme-btn.active {
+        color: var(--color-terminal-green);
+        border-color: var(--color-terminal-green-dim);
+        box-shadow: 0 0 12px var(--color-terminal-green-glow);
+    }
 </style>
 
 <script>
-  function setTheme(theme: string) {
-    if (theme) {
-      document.documentElement.setAttribute('data-theme', theme);
-    } else {
-      document.documentElement.removeAttribute('data-theme');
+    function setTheme(theme: string) {
+        if (theme) {
+            document.documentElement.setAttribute("data-theme", theme);
+        } else {
+            document.documentElement.removeAttribute("data-theme");
+        }
+        localStorage.setItem("theme", theme);
+
+        document
+            .querySelectorAll<HTMLButtonElement>("[data-set-theme]")
+            .forEach((btn) => {
+                btn.classList.toggle("active", btn.dataset.setTheme === theme);
+            });
     }
-    localStorage.setItem('theme', theme);
 
-    document.querySelectorAll<HTMLButtonElement>('[data-set-theme]').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.setTheme === theme);
-    });
-  }
+    function switchTheme(theme: string, e: MouseEvent) {
+        // Get click position for circle origin
+        const x = e.clientX;
+        const y = e.clientY;
 
-  function switchTheme(theme: string, e: MouseEvent) {
-    // Get click position for circle origin
-    const x = e.clientX;
-    const y = e.clientY;
+        // Use View Transitions API if available
+        if (document.startViewTransition) {
+            // Set CSS custom properties for the reveal origin
+            document.documentElement.style.setProperty("--reveal-x", `${x}px`);
+            document.documentElement.style.setProperty("--reveal-y", `${y}px`);
 
-    // Use View Transitions API if available
-    if (document.startViewTransition) {
-      // Set CSS custom properties for the reveal origin
-      document.documentElement.style.setProperty('--reveal-x', `${x}px`);
-      document.documentElement.style.setProperty('--reveal-y', `${y}px`);
-
-      document.startViewTransition(() => {
-        setTheme(theme);
-      });
-    } else {
-      // Fallback: just swap instantly
-      setTheme(theme);
+            document.startViewTransition(() => {
+                setTheme(theme);
+            });
+        } else {
+            // Fallback: just swap instantly
+            setTheme(theme);
+        }
     }
-  }
 
-  // Restore saved theme (no animation on load)
-  const saved = localStorage.getItem('theme') || '';
-  setTheme(saved);
+    // Restore saved theme (no animation on load)
+    const saved = localStorage.getItem("theme") || "";
+    setTheme(saved);
 
-  // Bind buttons
-  document.querySelectorAll<HTMLButtonElement>('[data-set-theme]').forEach(btn => {
-    btn.addEventListener('click', (e) => switchTheme(btn.dataset.setTheme || '', e));
-  });
+    // Bind buttons
+    document
+        .querySelectorAll<HTMLButtonElement>("[data-set-theme]")
+        .forEach((btn) => {
+            btn.addEventListener("click", (e) =>
+                switchTheme(btn.dataset.setTheme || "", e),
+            );
+        });
 </script>

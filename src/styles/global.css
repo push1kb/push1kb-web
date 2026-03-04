@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-mono: 'Monaspace Neon', monospace;
-  --font-terminal: 'Monaspace Krypton', monospace;
-  --font-comment: 'Monaspace Radon', monospace;
+  --font-mono: "Monaspace Neon", monospace;
+  --font-terminal: "Monaspace Krypton", monospace;
+  --font-comment: "Monaspace Radon", monospace;
 
   --color-terminal-green: #7aa2f7;
   --color-terminal-green-dim: #bb9af7;
