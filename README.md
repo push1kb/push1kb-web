@@ -1,43 +1,23 @@
-# Astro Starter Kit: Minimal
+# push1kb-web
 
-```sh
-pnpm create astro@latest -- --template minimal
-```
+Source for [push1kb.com](https://push1kb.com).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Built with
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+<div align="left">
+  <a href="https://astro.build">
+    <img alt="Astro" src="https://img.shields.io/badge/Astro-BC52EE?style=for-the-badge&logo=astro&logoColor=white" />
+  </a>
+  <a href="https://www.typescriptlang.org">
+    <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  </a>
+  <a href="https://monaspace.githubnext.com">
+    <img alt="Monaspace" src="https://img.shields.io/badge/Monaspace-111111?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <a href="https://catppuccin.com">
+    <img alt="Catppuccin" src="https://img.shields.io/badge/Catppuccin-F5C2E7?style=for-the-badge&logo=catppuccin&logoColor=302D41" />
+  </a>
+  <a href="https://github.com/enkia/tokyo-night-vscode-theme">
+    <img alt="Tokyo Night" src="https://img.shields.io/badge/Tokyo%20Night-1A1B26?style=for-the-badge&logo=visualstudiocode&logoColor=7AA2F7" />
+  </a>
+</div>

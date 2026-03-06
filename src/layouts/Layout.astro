@@ -4,6 +4,7 @@ import "@fontsource/monaspace-neon/700.css";
 import "@fontsource/monaspace-krypton/400.css";
 import "@fontsource/monaspace-krypton/700.css";
 import "@fontsource/monaspace-radon/400.css";
+import PostHog from "../components/PostHog.astro";
 import "../styles/global.css";
 
 interface Props {
@@ -42,6 +43,7 @@ const { title } = Astro.props;
     <meta name="twitter:title" content="Vijay Pushkin — Lead Experience Engineer" />
     <meta name="twitter:description" content="Full-stack developer building scalable web and decentralized applications across multi-chain ecosystems." />
     <meta name="twitter:image" content="https://push1kb.com/og.png" />
+    <PostHog />
     <script is:inline>
       (function() {
         var t = localStorage.getItem('theme');

@@ -2,47 +2,47 @@
 import Layout from "../layouts/Layout.astro";
 
 const projects = [
-    {
-        name: "gunsole",
-        desc: "Comprehensive logging & analytics platform with Desktop app (Tauri/Rust), browser testing environment, and Cloud SaaS. Dual-interface: Dev Mode for debugging, Product Mode for analytics.",
-        tech: ["Tauri", "Rust", "TypeScript", "React"],
-        url: "https://gunsole.com",
-    },
-    {
-        name: "superlend",
-        desc: "Cross-chain lending protocol frontend. Reduced network overhead by 93% (80+ RPC calls to 4-6) via custom multicall batching. Architected across 6 blockchain networks.",
-        tech: ["Next.js", "React 19", "TypeScript", "viem", "wagmi"],
-        url: "https://app.superlend.xyz",
-    },
+  {
+    name: "gunsole",
+    desc: "Comprehensive logging & analytics platform with Desktop app (Tauri/Rust), browser testing environment, and Cloud SaaS. Dual-interface: Dev Mode for debugging, Product Mode for analytics.",
+    tech: ["Tauri", "Rust", "TypeScript", "React"],
+    url: "https://gunsole.com",
+  },
+  {
+    name: "superlend",
+    desc: "Cross-chain lending protocol frontend. Reduced network overhead by 93% (80+ RPC calls to 4-6) via custom multicall batching. Architected across 6 blockchain networks.",
+    tech: ["Next.js", "React 19", "TypeScript", "viem", "wagmi"],
+    url: "https://app.superlend.xyz",
+  },
 ];
 
 const skills = [
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Angular",
-    "Node.js",
-    "Python",
-    "Rust",
-    "Java",
-    "PostgreSQL",
-    "Firebase",
-    "Supabase",
-    "AWS",
-    "Docker",
-    "Git",
-    "Spring Boot",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Angular",
+  "Node.js",
+  "Python",
+  "Rust",
+  "Java",
+  "PostgreSQL",
+  "Firebase",
+  "Supabase",
+  "AWS",
+  "Docker",
+  "Git",
+  "Spring Boot",
 ];
 
 const links = [
-    { label: "github", url: "https://github.com/push1kb" },
-    { label: "x/twitter", url: "https://x.com/push1kb" },
-    { label: "linkedin", url: "https://linkedin.com/in/vijaypushkin" },
-    {
-        label: "stackoverflow",
-        url: "https://stackoverflow.com/users/9399978/pushkin",
-    },
+  { label: "github", url: "https://github.com/push1kb" },
+  { label: "x/twitter", url: "https://x.com/push1kb" },
+  { label: "linkedin", url: "https://linkedin.com/in/vijaypushkin" },
+  {
+    label: "stackoverflow",
+    url: "https://stackoverflow.com/users/9399978/pushkin",
+  },
 ];
 ---
 
@@ -408,6 +408,8 @@ const links = [
         const x = e.clientX;
         const y = e.clientY;
 
+        (window as any).posthog?.capture("theme_changed", { theme: theme || "default" });
+
         // Use View Transitions API if available
         if (document.startViewTransition) {
             // Set CSS custom properties for the reveal origin
@@ -434,5 +436,29 @@ const links = [
             btn.addEventListener("click", (e) =>
                 switchTheme(btn.dataset.setTheme || "", e),
             );
+        });
+
+    // Track project card clicks
+    document
+        .querySelectorAll<HTMLAnchorElement>("[data-hover-glow]")
+        .forEach((card) => {
+            card.addEventListener("click", () => {
+                (window as any).posthog?.capture("project_clicked", {
+                    project_name: card.querySelector(".text-terminal-green.font-bold")?.textContent?.trim(),
+                    project_url: card.href,
+                });
+            });
+        });
+
+    // Track social/contact link clicks
+    document
+        .querySelectorAll<HTMLAnchorElement>("#contact a[href]")
+        .forEach((link) => {
+            link.addEventListener("click", () => {
+                (window as any).posthog?.capture("social_link_clicked", {
+                    label: link.textContent?.replace(/[\[\]]/g, "").trim(),
+                    url: link.href,
+                });
+            });
         });
 </script>
